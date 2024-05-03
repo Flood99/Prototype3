@@ -245,7 +245,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e5f4ecdb9064557b849b114c19e2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 4457389141747482531, guid: a7a53299122744107895f5f463e0fe9c, type: 3}
+  obstaclePrefabs:
+  - {fileID: 194656, guid: cb04eea70ee14ab49b68d12e2cbbf680, type: 3}
+  - {fileID: 134104, guid: 71782582b9d2cac4cba5251a3b767d13, type: 3}
+  - {fileID: 4457389141747482531, guid: a7a53299122744107895f5f463e0fe9c, type: 3}
+  - {fileID: 151096, guid: 367149bd17c4d4d4e8868ec6a5cf8d45, type: 3}
 --- !u!4 &491425595
 Transform:
   m_ObjectHideFlags: 0
@@ -517,9 +521,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17b910100377c4bf298aa771e44b2305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  background: {fileID: 835818919}
   jumpForce: 25
   gravityModifier: 8
   gameOver: 0
+  maxJumps: 2
+  objectSpeed: 30
 --- !u!54 &1569103170
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -535,7 +542,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 114
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &1569103171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -547,8 +554,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.50001734, z: 1}
+  m_Center: {x: -0, y: 0.24999133, z: 0}
 --- !u!1 &2014335011
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +681,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1001 &4457389140424490690
 PrefabInstance:
   m_ObjectHideFlags: 0
